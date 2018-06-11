@@ -1,0 +1,65 @@
+<div class="note-content" contenteditable="false">
+<b>Subjective:</b>
+ <br>
+ {{name}} is a {{age}} years old who 
+ {{#with session}}
+ {{gender}} represents presents for a colonoscopy.He has a history of previous anesthesia complications of {{anesthesia-reaction}}<br><br>
+ 
+ He previously had a colonoscopy for {{colonoscopy-reason}}.<br><br>
+ The colonoscopy was done {{colonoscopy-years}} years ago by {{colonoscopy-physician}}. The finds where {{colonoscopy-findings}}
+ <br>
+ <br>
+ <b>ROS:</b><br>
+  
+ <br>
+ <br>
+ <b>Allergies:</b><br>
+  {{drug-allergies-meds}}:{{drug-allergies-details}} 
+ <br>
+ <br>
+ <b>Medications:</b><br>
+
+ {{#with medication}}
+{{#each meds}}
+ - {{this.medication}} {{this.dosage}} {{this.timesPerDay}}/day <br>
+{{/each}}
+ {{/with}}
+ <br>
+ <br>
+ <b>PMH:</b><br>
+ {{medical-history-chronic-illnesses}}
+ <br>
+ <br>
+ <b>PSH:</b><br>
+ {{medical-history-surgeries}}
+ <br>
+ <br>
+ <b>FH:</b><br>
+ {{family-history-colonuterine-cancer-details}} had colon cancer or uterine cancer at {{family-history-colonuterine-cancer-ages}} years old
+ <br>
+ <br>
+ <b>SH:</b>
+ Smokes or has smoked.
+ Drinks 2 or more on occasions. 
+ <br>
+ {{# if illicitdrug-use-detail}}
+ Uses:{{illicitdrug-use-detail}}
+ {{/if}}
+ <br>
+ <br>
+  <b>Objective:</b> <br>
+
+ General: Well-appearing, no acute distress. AAOx3.<br>
+ HEENT: Oropharynx normal, TMs normal. No lymphadenopathy. <br>
+ Pulmonary: Clear to auscultation bilaterally, normal respiratory effort.<br>
+ Cardiovascular: Regular rate and rhythm, no murmurs. No LE edema.<br>
+ Abdomen: Soft, non-distended, non-tender to palpation. 
+
+ <br>
+ <br>
+
+ <b>Assessment / Plan:</b><br>
+ 1. Preventative:<br>
+- Colonoscopy: {{colonoscopy-years}} years ago not normal
+{{/with}}
+</div>

@@ -1,3 +1,40 @@
 <div class="note-content" contenteditable="false">
-	{{long}}
+ <b>Subjective:</b>
+ <br>
+ {{name}} is a {{age}} years old who would like to discuss "{{session.drug-allergies-details}}"
+ <br>
+ <br>
+ <b>Allergies:</b><br>
+ <br>
+ <br>
+ <b>Medications:</b><br>
+ {{#with session}}
+ {{#with medication}}
+ {{#with meds}}
+ - {{coumadin.medication}} {{coumadin.dosage}} {{coumadin.timesPerDay}}/day
+ {{/with}}
+ {{/with}}
+
+ {{/with}}
+ <br>
+ <br>
+ <b>Social History:</b><br>
+ Does not drink
+ <br>
+ <br>
+ <b>Objective:</b> <br>
+
+ General: Well-appearing, no acute distress. AAOx3.<br>
+ HEENT: Oropharynx normal, TMs normal. No lymphadenopathy. <br>
+ Pulmonary: Clear to auscultation bilaterally, normal respiratory effort.<br>
+ Cardiovascular: Regular rate and rhythm, no murmurs. No LE edema.<br>
+ Abdomen: Soft, non-distended, non-tender to palpation. 
+
+ <br>
+ <br>
+
+ <b>Assessment / Plan:</b><br>
+ 1. Preventative:<br>
+ - Colonoscopy: {{session.colonoscopy-years}} years ago not normal
+
 </div>
